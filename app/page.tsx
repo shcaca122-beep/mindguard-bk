@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -23,12 +24,14 @@ export default function LandingPage() {
         </p>
         
         <div className="flex gap-4">
+          <Link href="/konseling">
           <button className="bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg shadow-emerald-200 hover:scale-105 transition">
             Mulai Konseling Sekarang
           </button>
           <button className="bg-white text-slate-600 border border-slate-200 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition">
             Pelajari Fitur
           </button>
+          </Link>
         </div>
 
         {/* Preview Statis */}
