@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id    String @id @default(cuid())
+  nama  String
+  email String @unique
+  role  String @default("SISWA") // SISWA atau GURU
+}
+
+model Janji {
+  id          String   @id @default(cuid())
+  subjek      String
+  pesan       String
+  tanggal     DateTime
+  status      String   @default("PENDING")
+}
